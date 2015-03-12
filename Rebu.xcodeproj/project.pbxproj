@@ -38,6 +38,7 @@
 		0FCDE2E81AA676BF00DB0389 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCDE2E71AA676BF00DB0389 /* Parse.framework */; };
 		0FCDE2EB1AA6782200DB0389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCDE2E91AA6782200DB0389 /* Main.storyboard */; };
 		0FCDE2ED1AA6977E00DB0389 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCDE2EC1AA6977E00DB0389 /* libz.dylib */; };
+		3B523EAB1AB241EB006FDFDC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B523EAA1AB241EB006FDFDC /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +63,7 @@
 		0FBF93C01AA520240050EDCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FBF93C11AA520240050EDCB /* RebuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebuTests.swift; sourceTree = "<group>"; };
 		0FBF93CB1AA56E3D0050EDCB /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		0FBF93CD1AA56EC20050EDCB /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBUserSettingsViewResources.bundle; path = ../../FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
+		0FBF93CD1AA56EC20050EDCB /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBUserSettingsViewResources.bundle; path = ../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
 		0FBF93CF1AA56FCA0050EDCB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		0FBF93D11AA56FD30050EDCB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		0FBF93D31AA56FE30050EDCB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -87,6 +88,7 @@
 		0FCDE2E71AA676BF00DB0389 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		0FCDE2EA1AA6782200DB0389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Rebu/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0FCDE2EC1AA6977E00DB0389 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3B523EAA1AB241EB006FDFDC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				0FCDE2EC1AA6977E00DB0389 /* libz.dylib */,
-				0FCDE2E91AA6782200DB0389 /* Main.storyboard */,
 				0FCDE2DC1AA6737D00DB0389 /* Foundation.framework */,
 				0FCDE2D71AA6687500DB0389 /* SystemConfiguration.framework */,
 				0FCDE2D51AA6686800DB0389 /* StoreKit.framework */,
@@ -171,7 +172,9 @@
 			isa = PBXGroup;
 			children = (
 				0FBF93A81AA520240050EDCB /* AppDelegate.swift */,
+				0FCDE2E91AA6782200DB0389 /* Main.storyboard */,
 				0FBF93AD1AA520240050EDCB /* ViewController.swift */,
+				3B523EAA1AB241EB006FDFDC /* CreateAccountViewController.swift */,
 				0FBF93B21AA520240050EDCB /* Images.xcassets */,
 				0FBF93B41AA520240050EDCB /* LaunchScreen.xib */,
 				0FBF93AA1AA520240050EDCB /* Rebu.xcdatamodeld */,
@@ -320,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B523EAB1AB241EB006FDFDC /* CreateAccountViewController.swift in Sources */,
 				0FBF93AE1AA520240050EDCB /* ViewController.swift in Sources */,
 				0FCDE2DB1AA669A700DB0389 /* narnarnar.m in Sources */,
 				0FBF93A91AA520240050EDCB /* AppDelegate.swift in Sources */,
@@ -360,6 +364,7 @@
 				0FCDE2EA1AA6782200DB0389 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
