@@ -165,7 +165,6 @@
                                 </state>
                                 <connections>
                                     <action selector="fbConnect:" destination="frL-vj-Smq" eventType="touchUpInside" id="PuD-Rx-qSS"/>
-                                    <segue destination="jbZ-fV-gsh" kind="show" identifier="loggedIn" id="3PR-24-YFc"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYP-DL-pcv">
@@ -619,7 +618,7 @@
         <!--View Controller-->
         <scene sceneID="Izs-G4-lif">
             <objects>
-                <viewController id="jbZ-fV-gsh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapScreen" id="jbZ-fV-gsh" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JGs-UG-DHv"/>
                         <viewControllerLayoutGuide type="bottom" id="82W-ER-BRb"/>
@@ -685,7 +684,7 @@
         <!--REGISTER-->
         <scene sceneID="BNt-xO-auv">
             <objects>
-                <navigationController title="REGISTER" automaticallyAdjustsScrollViewInsets="NO" id="6bw-Wc-nkV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="register" title="REGISTER" automaticallyAdjustsScrollViewInsets="NO" id="6bw-Wc-nkV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5l7-33-GLP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
