@@ -47,10 +47,49 @@ class ViewController: UIViewController {
         object.addObject("Five", forKey: "websiteRating")
         object.save()
         
-        var object2 = PFObject(className: "testDataClass")
-        object2.addObject("MEAN book", forKey: "websiteUrl")
-        object2.addObject("Four", forKey: "websiteRating")
-        object2.save()
+        
+        var timer = NSTimer()
+        timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("carsNearMe"), userInfo: nil, repeats: true)
+    }
+    
+    func carsNearMe() {
+        let point = PFGeoPoint(latitude:19.430662, longitude:-99.200996)
+        /*
+        var query = PFQuery(className:"_User")
+        query.whereKey("location", nearGeoPoint:point)
+        query.whereKey("driver", equalTo: true)
+        query.limit = 10
+        
+        var placesObjects = query.findObjects()
+        println(placesObjects)
+        */
+        
+        var query = PFQuery(className:"_User")
+        query.whereKey("location", nearGeoPoint:point)
+        query.whereKey("driver", equalTo: true)
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                // The find succeeded.
+                println("Successfully retrieved \(objects.count) drivers.")
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        
+                        var username: AnyObject! = object.objectForKey("username")
+                        var location: PFGeoPoint = object.objectForKey("location") as PFGeoPoint
+                        
+                        println("Driver: \(username)")
+                        println("Latitude: \(location.latitude) Longitude: \(location.longitude)")
+                    }
+                    // println(objects[0].objectForKey("location"))
+                }
+            } else {
+                // Log details of the failure
+                println("Error: \(error) \(error.userInfo!)")
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
